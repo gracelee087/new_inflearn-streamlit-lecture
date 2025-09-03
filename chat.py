@@ -16,7 +16,7 @@ load_dotenv()
 if 'message_list' not in st.session_state:
     st.session_state.message_list = []
 
-for message in st.session_state.message_list:
+for message in st.session_state.message_list:  # 위 채팅창에 문의한게 저장되게끔 하는거 
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
